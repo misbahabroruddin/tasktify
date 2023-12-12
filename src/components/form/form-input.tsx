@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { forwardRef } from 'react';
-import { useFormStatus } from 'react-dom';
+import { forwardRef } from "react";
+import { useFormStatus } from "react-dom";
 
-import { Label } from '@/components/ui/label';
-import { Input } from '@/components/ui/input';
-import { cn } from '@/lib/utils';
-import { FormErorrs } from './form-errors';
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+import { FormErorrs } from "./form-errors";
 
 interface FormInputProps {
   id: string;
@@ -32,7 +32,7 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
       disabled,
       errors,
       className,
-      defaultValue = '',
+      defaultValue = "",
       onBlur,
     },
     ref
@@ -60,8 +60,9 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
             placeholder={placeholder}
             type={type}
             disabled={pending || disabled}
-            className={cn('text-sm px-2 py-1 h-7', className)}
+            className={cn("text-sm px-2 py-1 h-7", className)}
             aria-describedby={`${id}-error`}
+            autoComplete='off'
           />
         </div>
         <FormErorrs id={id} errors={errors} />
@@ -70,4 +71,4 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
   }
 );
 
-FormInput.displayName = 'FormInput';
+FormInput.displayName = "FormInput";
