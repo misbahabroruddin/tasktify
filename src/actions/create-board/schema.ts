@@ -11,6 +11,6 @@ export const CreateBoard = z.object({
     }),
   image: z.string({
     required_error: "Image is required",
-    invalid_type_error: "Type error",
+    invalid_type_error: "Please select the image",
   }),
 });
