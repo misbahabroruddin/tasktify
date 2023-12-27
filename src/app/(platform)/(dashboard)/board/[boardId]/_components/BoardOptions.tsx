@@ -53,7 +53,7 @@ export default function BoardOptions({ id }: BoardOptionsProps) {
           disabled={isLoading}
           className='rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm'
         >
-          Delete
+          Delete this board
         </Button>
       </PopoverContent>
     </Popover>
