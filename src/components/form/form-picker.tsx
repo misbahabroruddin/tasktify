@@ -59,6 +59,7 @@ export function FormPicker({ id, errors }: FormPickerProps) {
       <div className='grid grid-cols-3 gap-2 mb-2'>
         {images.map((image) => (
           <div
+            key={image.id}
             className={cn(
               "cursor-pointer relative aspect-video group hover:opacity-75 transition bg-muted",
               pending && "opacity-50 hover:opacity-50 cursor-auto"
